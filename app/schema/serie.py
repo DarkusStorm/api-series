@@ -10,9 +10,12 @@ class SerieSchema(BaseModel):
     class Config:
         from_attributes = True
 
-class UpdateSerie(BaseModel):
+class SerieUpdateSchema(BaseModel):
     titulo: Optional[str]
     descricao: Optional[str]
     ano_lancamento: Optional[int]
 
-    # Classe para atualizar Séries, onde todos os valores são opcionais pois não é obrigatório atualizar todos eles ao executar serie.put
+    class Config:
+        from_attributes = True
+
+    # Classe para atualizar Séries, onde todos os valores são opcionais pois não é obrigatório atualizar todos eles ao executar serie.put.

@@ -11,3 +11,4 @@ class SerieModel(Base):
     titulo: Mapped[str] = mapped_column(String(100), nullable=False)
     descricao: Mapped[str] = mapped_column(String(255))
     ano_lancamento: Mapped[int] = mapped_column(Integer)
+    # "Mapped" indica ao SQL Alchemy que o atributo é mapeado/ligado a um banco de dados ou relacionamento. "mapped_column" indica a coluna que será mapeada.
